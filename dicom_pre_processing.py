@@ -9,7 +9,7 @@ import json
 from skimage import measure, morphology
 from datetime import datetime
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
-
+# hey
 # Load the scans in given folder path
 def load_scan(path):
     slices = [dicom.read_file(path + '/' + s) for s in os.listdir(path)]

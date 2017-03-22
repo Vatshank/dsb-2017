@@ -3,7 +3,7 @@ import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 import dicom
 import os
 import scipy.ndimage
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import json
 
 from skimage import measure, morphology
@@ -145,14 +145,14 @@ for patient in patients:
 
     first_patient = load_scan(INPUT_FOLDER + patient)#patients[0])
     first_patient_pixels = get_pixels_hu(first_patient)
-    plt.hist(first_patient_pixels.flatten(), bins=80, color='c')
-    plt.xlabel("Hounsfield Units (HU)")
-    plt.ylabel("Frequency")
-    plt.show()
-
-    # Show some slice in the middle
-    plt.imshow(first_patient_pixels[80], cmap=plt.cm.gray)
-    plt.show()
+    # plt.hist(first_patient_pixels.flatten(), bins=80, color='c')
+    # plt.xlabel("Hounsfield Units (HU)")
+    # plt.ylabel("Frequency")
+    # plt.show()
+    #
+    # # Show some slice in the middle
+    # plt.imshow(first_patient_pixels[80], cmap=plt.cm.gray)
+    # plt.show()
 
     # Resample pixels
     pix_resampled, spacing = resample(first_patient_pixels, first_patient, [1,1,1])

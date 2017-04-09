@@ -93,7 +93,7 @@ if __name__ == '__main__':
 
     # Getting list of datasets (local)
     luna_path = "/home/ec2-user/LUNA16"
-    subset_list = ["/subset{}".format(str(x)) for x in range(2)]
+    subset_list = ["/subset{}".format(str(x)) for x in range(10)]
     output_path = "/home/ec2-user/LUNA16/nodule_slices"
 
     # loop thru each subset (10 total) in LUNA16
